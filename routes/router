@@ -1,0 +1,4 @@
+from views import views
+
+
+views.route('/<int:proyecto_id>',methods=['GET'])
