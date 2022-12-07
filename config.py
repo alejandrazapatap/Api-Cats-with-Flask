@@ -1,10 +1,11 @@
-import sqlite3
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
+
+db = SQLAlchemy()
 
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite3://sitio.db'
 
-db = SQLAlchemy(app)
+db.init_app(app)
 
