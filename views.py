@@ -16,5 +16,5 @@ def gatos():
             #print(data)
             #data = str(json.loads(data))
             return render_template('index.html', data=data) 
-
-
+        
+    
