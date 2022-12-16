@@ -6,6 +6,7 @@ import json
 
 # register of views
 app = Flask(__name__)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/sitio.db'
 
 # cursor to query to db
@@ -32,6 +33,9 @@ def proyect_user():
     }
     json_str = json.dumps(my_object)
     return json_str
+
+
+app.register_blueprint(views, url_prefix="/views")
 
 
 if __name__ == '__main__':
