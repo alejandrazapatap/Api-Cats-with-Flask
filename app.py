@@ -34,9 +34,3 @@ def proyect_user():
     json_str = json.dumps(my_object)
     return json_str
 
-
-app.register_blueprint(views, url_prefix="/views")
-
-
-if __name__ == '__main__':
-    app.run(debug=True, port=8000)
